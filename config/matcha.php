@@ -10,7 +10,7 @@ return [
     // The first admin account, created by `php artisan db:seed`.
     'admin' => [
         'name' => env('ADMIN_NAME', 'Admin'),
-        'email' => env('ADMIN_EMAIL'),
-        'password' => env('ADMIN_PASSWORD'),
+        'email' => env('ADMIN_EMAIL', 'admin@gmail.com'),
+        'password' => env('ADMIN_PASSWORD', 'administrator2026'),
     ],
 ];
