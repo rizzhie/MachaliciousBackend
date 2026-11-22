@@ -4,6 +4,8 @@ services:
     runtime: docker
     plan: free
     region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /up
     envVars:
       - key: APP_NAME
@@ -12,6 +14,8 @@ services:
         value: production
       - key: APP_DEBUG
         value: "false"
+      - key: APP_KEY
+        value: base64:abDrp5CUuJG/kfDDaLq053ffOa22+c+0IQQ2rnhb1cQ=
       - key: DB_CONNECTION
         value: sqlite
       - key: DB_DATABASE
@@ -27,6 +31,6 @@ services:
       - key: ADMIN_PASSWORD
         value: administrator2026
       - key: CORS_ALLOWED_ORIGINS
-        value: "https://dist-xi-pink-29.vercel.app,http://localhost:5173,http://127.0.0.1:5173"
+        value: "https://frontend-pink-beta-14.vercel.app,http://localhost:5173,http://127.0.0.1:5173"
       - key: SANCTUM_STATEFUL_DOMAINS
-        value: "dist-xi-pink-29.vercel.app,localhost:5173,127.0.0.1:5173"
+        value: "frontend-pink-beta-14.vercel.app,localhost:5173,127.0.0.1:5173"
